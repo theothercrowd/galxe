@@ -11,6 +11,21 @@
 // P.S. It's important to open Galxe page after opening Developer's Console!!
 // #############################################################################
 
+// Call the function to check all twitter and "visit site" tasks
+
+const elementsToClick = document.querySelectorAll('.d-flex.height-100.width-100.click-area');
+
+const clickElement = (element) => {
+  const event = new MouseEvent('click', {
+    view: window,
+    bubbles: true,
+    cancelable: true
+  });
+  element.dispatchEvent(event);
+};
+
+elementsToClick.forEach(clickElement);
+
 function clickFirstButtonWithText(text) {
   const buttons = document.getElementsByTagName("button");
 
@@ -75,37 +90,16 @@ await iterateQuizOptions(quizOne);
 clickFirstButtonWithText("Start");
 await iterateQuizOptions(quizTwo);
 
-
 }
 
 // Call the function to start the quizzes sequentially
-startQuizzes();
+await startQuizzes();
 
-// Call the function to check all twitter and "visit site" tasks
-
-const elementsToClick = document.querySelectorAll('.d-flex.height-100.width-100.click-area');
-
-const clickElement = (element) => {
-  const event = new MouseEvent('click', {
-    view: window,
-    bubbles: true,
-    cancelable: true
-  });
-  element.dispatchEvent(event);
-};
-
-elementsToClick.forEach(clickElement);
+// Claim points
 
 async function claimPoints () {
-  await new Promise((resolve) => setTimeout(resolve, 60000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   clickFirstButtonWithText("Claim 80 Points");
 }
 
 await claimPoints ();
-
-async function pageRefresh () {
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  location.reload()
-}
-
-await pageRefresh ();
