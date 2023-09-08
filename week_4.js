@@ -5,9 +5,10 @@
 // #############################################################################
 // 1. Open the developers console (F12 for Windows, cmd+option+I for Mac)
 // 2. Open the campaign link, sign in to Galxe with your wallet
-// 3. Put the script in the console and press enter
-// 4. There'll be twitter window opened during the script execution - close it
-// 5. Wait until you have 80 points and claim them
+// 3. Refresh the page
+// 4. Put the script in the console and press enter
+// 5. There'll be twitter window opened during the script execution - close it
+// 6. Wait until you have 80 points and claim them
 // P.S. It's important to open Galxe page after opening Developer's Console!!
 // #############################################################################
 
