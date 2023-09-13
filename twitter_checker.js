@@ -28,6 +28,8 @@ const clickElement = (element) => {
 
 elementsToClick.forEach(clickElement);
 
+// Refresh the page in 15 seconds after beginning
+
 async function pageRefresh () {
   await new Promise((resolve) => setTimeout(resolve, 15000));
   location.reload()
