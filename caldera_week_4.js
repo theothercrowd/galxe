@@ -100,7 +100,7 @@ await startQuizzes();
 
 async function claimPoints () {
   await new Promise((resolve) => setTimeout(resolve, 5000));
-  clickFirstButtonWithText("Claim 80 Points");
+  clickFirstButtonWithText("Claim 75 Points");
 }
 
 await claimPoints ();
